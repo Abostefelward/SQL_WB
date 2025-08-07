@@ -1,4 +1,3 @@
 #Grundlagen
 
-source 01_basics\rdbms.sql
-
+source 01_basics\rdbms.s
