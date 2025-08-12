@@ -2,11 +2,20 @@
 
 -- SELECT 
 -- Vorbereitung
+-- DB wechseln
 
-Drop TABLE if EXISTS boo.contacts;
+SHOW DATABASES;
 
--- 1. Tabelle erstellen mit AUTO_INCREMENT und PRIMARY KEY
-CREATE TABLE IF NOT EXISTS boo.contacts (
+Drop TABLE IF EXISTS boo.contacts;
+
+-- 1. Tabelle erstellen Mit AUTO_INCREMENT und PRIMARY KEY
+CREATE DATABASE IF NOT EXISTS boo;
+USE boo;
+
+DROP TABLE IF EXISTS contacts;
+
+CREATE TABLE contacts 
+(
     id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(100),
     address VARCHAR(255),
@@ -19,7 +28,6 @@ CREATE TABLE IF NOT EXISTS boo.contacts (
 
 DESCRIBE boo.contacts;
 
--- 2. 50 Datensätze einfügen (id wird automatisch vergeben)
 INSERT INTO contacts (name, address, phone, email, age, state, city) VALUES
 ('Sophia Müller', 'Musterstraße 1', '030/123456', 'sophia.mueller@example.de', 25, 'Berlin', 'Berlin'),
 ('Ahmet Yılmaz', 'Hauptstraße 2', '0221/987654', 'ahmet.yilmaz@example.de', 32, 'Nordrhein-Westfalen', 'Köln'),
@@ -72,8 +80,6 @@ INSERT INTO contacts (name, address, phone, email, age, state, city) VALUES
 ('Elif Şahin', 'Marktplatz 45', '0911/999555', 'elif.sahin@example.de', 23, 'Bayern', 'Nürnberg'),
 ('Okan Yildiz', 'Ringweg 46', '0231/444555', 'okan.yildiz@example.de', 28, 'Nordrhein-Westfalen', 'Dortmund'),
 ('Samira Rahmani', 'Bahnhofstraße 47', '0611/555666', 'samira.rahmani@example.de', 26, 'Hessen', 'Frankfurt'),
-('Kai Wagner', 'Schillerplatz 48', '030/111222', 'kai.wagner@example.de', 32, 'Berlin', 'Berlin'),
-('Tarek Bouzid', 'Rathausplatz 49', '0711/222333', 'tarek.bouzid@example.de', 30, 'Baden-Württemberg', 'Stuttgart'),
-('Melis Erdem', 'Hauptplatz 50', '040/333444', 'melis.erdem@example.de', 25, 'Hamburg', 'Hamburg');
+('Kai Wagner', 'Schillerplatz 48', '030/111222', 'kai.wagner@example.de', 32, 'Berlin', 'Berlin');
 
-SELECT * FROM boo.contacts;
+SELECT * FROM boo.contacts boo;
