@@ -31,16 +31,14 @@ Show TABLES;
 DESCRIBE kunde;
 
 
--- Datensätze/zeilen
+-- Datensätze/zeilen /password immer hashen!! SHA" ('pw',256)
 
-INSERT INTO kunde (k_id,k_name,k_alter,k_mail,k_password) VALUES (DEFAULT,'Meier',28,'meier@web.de','123pass');
-INSERT INTO kunde (k_id,k_name,k_alter,k_mail,k_password) VALUES (DEFAULT,'Hussein',32,'hussein@web.de','1234pass');
-INSERT INTO kunde (k_id,k_name,k_alter,k_mail,k_password) VALUES (DEFAULT,'li',26,'li@web.de','12345pass');
-INSERT INTO kunde (k_id,k_name,k_alter,k_mail,k_password) VALUES (DEFAULT,'li',40,'lichan@gmail.com','321pass');
-INSERT INTO kunde (k_id,k_name,k_alter,k_mail,k_password) VALUES (DEFAULT,'li',61,'liyoun@gmail.com','213pass');
+INSERT INTO kunde (k_id,k_name,k_alter,k_mail,k_password) VALUES (DEFAULT,'Meier',28,'meier@web.de',SHA2('123pass',256));
+INSERT INTO kunde (k_id,k_name,k_alter,k_mail,k_password) VALUES (DEFAULT,'Hussein',32,'hussein@web.de',SHA2('1234pass',256));
+INSERT INTO kunde (k_id,k_name,k_alter,k_mail,k_password) VALUES (DEFAULT,'li',26,'li@web.de',SHA2('12345pass',256));
+INSERT INTO kunde (k_id,k_name,k_alter,k_mail,k_password) VALUES (DEFAULT,'li',40,'lichan@gmail.com',SHA2('321pass',256));
+INSERT INTO kunde (k_id,k_name,k_alter,k_mail,k_password) VALUES (DEFAULT,'li',61,'liyoun@gmail.com',SHA2('213pass',256));
 
-
-INSERT INTO kunde(k_id,k_name,k_alter,k_mail) VALUES (DEFAULT,NULL,NULL,NULL);
 
 
 
