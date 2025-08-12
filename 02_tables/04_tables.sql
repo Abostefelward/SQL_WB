@@ -20,9 +20,8 @@ CREATE Table IF NOT EXISTS kunde
     k_name VARCHAR(45) NOT NULL DEFAULT 'TBA',                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
     k_alter TINYINT,
     k_mail VARCHAR(100) UNIQUE,
-    k_password VARCHAR(255) NOT NULL
+    k_password VARCHAR(255)
 );
-
 
 -- Tabellen anzeigen
 Show TABLES;
